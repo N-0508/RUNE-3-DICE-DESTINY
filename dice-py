@@ -1,0 +1,19 @@
+import random
+
+def roll_dice():
+    dice_face = random.randint(1, 6)
+    return dice_face
+
+print("🎲 Welcome to the Dice Roller of Dataland 🎲")
+
+while True:
+    user_input = input("🔁 Press 'r' to roll the dice or 'q' to quit: ").lower()
+
+    if user_input == 'r':
+        result = roll_dice()
+        print(f"🎯 You rolled: {result}")
+    elif user_input == 'q':
+        print("👋 Leaving the Dice Portal of Dataland. See you again!")
+        break
+    else:
+        print("❗Invalid input. Please press 'r' to roll or 'q' to quit.")
